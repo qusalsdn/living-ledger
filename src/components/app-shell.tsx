@@ -2,13 +2,15 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { CalendarRange, LayoutDashboard, LogOut, ReceiptText } from "lucide-react";
+import { BarChart3, CalendarRange, LayoutDashboard, LogOut, ReceiptText, Repeat2 } from "lucide-react";
 import { createBrowserClient } from "@/lib/supabase/client";
 
 const navigation = [
   { href: "/dashboard", label: "대시보드", icon: LayoutDashboard },
   { href: "/costs", label: "고정비", icon: ReceiptText },
+  { href: "/subscriptions", label: "구독", icon: Repeat2 },
   { href: "/contracts", label: "계약 일정", icon: CalendarRange },
+  { href: "/reports", label: "월간 리포트", icon: BarChart3 },
 ];
 
 export function AppShell({ children }: { children: React.ReactNode }) {
