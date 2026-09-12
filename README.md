@@ -8,9 +8,15 @@
 pnpm dev
 ```
 
-브라우저에서 [http://localhost:3000](http://localhost:3000)을 엽니다.
+브라우저에서 [http://localhost:4000](http://localhost:4000)을 엽니다.
 
 Supabase를 연결할 때는 `.env.example`을 `.env.local`로 복사하고 프로젝트 값을 입력합니다.
+
+이메일 인증 후 돌아올 수 있도록 Supabase Authentication의 URL Configuration에 `http://localhost:4000/auth/callback`을 Redirect URL로 등록하세요.
+
+## Phase 2 데이터베이스 설정
+
+고정비와 계약 일정 기능을 사용하려면 Supabase SQL Editor에서 [Phase 2 마이그레이션](supabase/migrations/202609120001_phase2_core.sql)을 실행하세요. 이 마이그레이션은 두 테이블과 Row Level Security 정책을 만들며, 로그인한 사용자는 자신의 데이터만 읽고 수정할 수 있습니다.
 
 ## 문서
 
